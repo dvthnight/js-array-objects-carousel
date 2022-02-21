@@ -61,20 +61,48 @@ const contenitoreAnteprime = [];
 
 let fotoCorrente = 0;
 
-for(let i = 0; i < paese.length; i++){
+// for(let i = 0; i < paese.length; i++){
+//     const anteprima = document.createElement("figure");
+//     const anteprimaImg = document.createElement("img");
+
+//     console.log(paese, paese[i].item)
+    
+//     anteprimaImg.src = paese[i].item;
+//     anteprima.append(anteprimaImg);
+//     // console.dir(anteprimaImg);
+
+//     contenitoreAnteprime.push(anteprima);
+//     anteprime.append(anteprima);
+
+
+
+//     anteprima.addEventListener("click", function(){
+
+//         contenitoreAnteprime[fotoCorrente].classList.remove("active");
+//         fotoCorrente = i;
+//         contenitoreAnteprime[fotoCorrente].classList.add("active");
+
+//         fotoPrincipale.src = paese[fotoCorrente].item;
+//         contenitorePrincipale.append(fotoPrincipale);
+//         titoloFoto.innerHTML = paese[fotoCorrente].title;
+//         paragrafoFoto.innerHTML = paese[fotoCorrente].text;
+
+//     })
+
+// }
+
+
+paese.forEach((el,i) => {
     const anteprima = document.createElement("figure");
     const anteprimaImg = document.createElement("img");
 
     console.log(paese, paese[i].item)
-    
+
     anteprimaImg.src = paese[i].item;
     anteprima.append(anteprimaImg);
-    // console.dir(anteprimaImg);
 
     contenitoreAnteprime.push(anteprima);
     anteprime.append(anteprima);
-
-
 
     anteprima.addEventListener("click", function(){
 
@@ -89,8 +117,8 @@ for(let i = 0; i < paese.length; i++){
 
     })
 
-}
-console.log(contenitoreAnteprime)
+});
+
 
 
 
